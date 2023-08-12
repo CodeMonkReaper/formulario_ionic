@@ -1,0 +1,1 @@
+si esto esta aqui logre dominar el gitignore
