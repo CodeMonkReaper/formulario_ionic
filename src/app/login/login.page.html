@@ -1,0 +1,21 @@
+<app-header  titulo="login"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-label>Nombre:{{nombre||'no hay nombre'}}</ion-label>
+  <ion-input  [(ngModel)]="nombre" type="text" placeholder="Awesome Input"></ion-input>
+
+  <form #formlogin="ngForm" (ngSubmit)="onSubmitTemplate()" >
+  <ion-label>  {{formlogin.valid}}</ion-label>
+  <ion-label>nombre:{{nombre||'no hay nombre'}}</ion-label>
+
+
+<ion-input [(ngModel)]="usuario.usr" [ngModelOptions]="{standalone: true}" type="text" placeholder="Awesome Input"></ion-input>
+  <ion-input  [(ngModel)]="usuario.pw"    [ngModelOptions]="{standalone: true}"  type="password" placeholder="contraseña"></ion-input>
+  <ion-button type="submit" [disabled]="!formlogin.valid" >login</ion-button>
+</form>
+</ion-content>
